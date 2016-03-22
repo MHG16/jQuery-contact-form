@@ -1,0 +1,26 @@
+{
+  "name": "jquery-contact-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHG16/jQuery-contact-form.git"
+  },
+  "keywords": [
+    "jquery",
+    "contact-form"
+  ],
+  "author": "Martin Grossmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MHG16/jQuery-contact-form/issues"
+  },
+  "homepage": "https://github.com/MHG16/jQuery-contact-form#readme",
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
