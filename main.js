@@ -33,27 +33,33 @@ $( ".target" ).hide();
 
 
 	if (userName === '') {
-		$('.nameError').html('<p>Name cannot be left empty</p>');
+		$('.nameError').html('<p>Name cannot be left empty</p>')
+		$('.nameError').css('color', 'red');
 	}
 
 	if (userEmail === '') {
 		$('.emailError').html('<p>Email cannot be left empty</p>');
+		$('.emailError').css('color', 'red');
 	}
 
 	if (userEmail.indexOf('@') === -1) {
 		$('.emailError').html('<p>Email must contain an @</p>');
+		$('.emailError').css('color', 'red');
 	}
 
 	if (userWebsite === '') {
 		$('.websiteError').html('<p>Website cannot be left empty</p>');
+		$('.websiteError').css('color', 'red');
 	}
 
 	if (userWebsite.substring(0, 7) !== 'http://') {
 		$('.websiteError').html('<p>Website must start with http://</p>');
+		$('.websiteError').css('color', 'red');
 	}
 
 	if (userMessage === '') {
 		$('.messageError').html('<p>Message cannot be left empty</p>');
+		$('.messageError').css('color', 'red');
 	}
 
 });
