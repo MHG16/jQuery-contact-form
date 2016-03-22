@@ -19,23 +19,51 @@
 var form = $('form');
 
 
-
-form.on('submit'), function(e) {
+form.on('submit', function(e) {
 
 	e.preventDefault();
 
-	var userName = $('name').val();
-	var userEmail = $('email').val();
-	var userWebsite = $('website').val();
-	var userMessage = $('message').val();
+	var userName = $('.name').val();
+	var userEmail = $('.email').val();
+	var userWebsite = $('.website').val();
+	var userMessage = $('.message').val();
+
+
+$( ".target" ).hide();
+
 
 	if (userName === '') {
-		alert('Name cannot be left empty');
-		return
+		$('.nameError').html('<p>Name cannot be left empty</p>');
+		return;
 	}
 
-	else if ((userEmail === '') || (userName.indexOf('@') === -1)) {
 
-		
+	else if (userEmail === '') {
+		$('.nameError').html('<p>Email cannot be left empty</p>');
+		return;
 	}
-}
+
+	else if (userEmail.indexOf('@') === -1) {
+		$('.emailError').html('<p>Email must contain an @</p>');
+		return;
+	}
+
+	else if (userWebsite === '') {
+		$('.websiteError'.html('<p>Website cannot be left empty</p>');
+		return;
+	}
+
+	else if (userWebsite.substring(0, 7) !== 'http://') {
+		$('.websiteError').html('<p>Website must start with http://</p>');
+		return;
+	}
+
+	else if (userMessage === '') {
+		$('.messageError').html('<p>Message cannot be left empty</p>');
+		return;
+	}
+
+});
+
+
+
