@@ -43,7 +43,7 @@ $( ".target" ).hide();
 	}
 
 	if (userEmail.indexOf('@') === -1) {
-		$('.emailError').html('<p>Email must contain an @</p>');
+		$('.emailError').html('<p>Email must contain an \'@\'</p>');
 		$('.emailError').css('color', 'red');
 	}
 
@@ -61,6 +61,8 @@ $( ".target" ).hide();
 		$('.messageError').html('<p>Message cannot be left empty</p>');
 		$('.messageError').css('color', 'red');
 	}
+
+	$('.successMessage').html('<p>Thanks for contacting us __ .  We have recieved your message and will be in touch with you shortly.</p>');
 
 });
 
