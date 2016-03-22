@@ -34,33 +34,26 @@ $( ".target" ).hide();
 
 	if (userName === '') {
 		$('.nameError').html('<p>Name cannot be left empty</p>');
-		return;
 	}
 
-
-	else if (userEmail === '') {
-		$('.nameError').html('<p>Email cannot be left empty</p>');
-		return;
+	if (userEmail === '') {
+		$('.emailError').html('<p>Email cannot be left empty</p>');
 	}
 
-	else if (userEmail.indexOf('@') === -1) {
+	if (userEmail.indexOf('@') === -1) {
 		$('.emailError').html('<p>Email must contain an @</p>');
-		return;
 	}
 
-	else if (userWebsite === '') {
-		$('.websiteError'.html('<p>Website cannot be left empty</p>');
-		return;
+	if (userWebsite === '') {
+		$('.websiteError').html('<p>Website cannot be left empty</p>');
 	}
 
-	else if (userWebsite.substring(0, 7) !== 'http://') {
+	if (userWebsite.substring(0, 7) !== 'http://') {
 		$('.websiteError').html('<p>Website must start with http://</p>');
-		return;
 	}
 
-	else if (userMessage === '') {
+	if (userMessage === '') {
 		$('.messageError').html('<p>Message cannot be left empty</p>');
-		return;
 	}
 
 });
