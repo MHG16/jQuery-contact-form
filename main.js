@@ -62,7 +62,7 @@ $( ".target" ).hide();
 		$('.messageError').css('color', 'red');
 	}
 
-	$('.successMessage').html('<p>Thanks for contacting us __ .  We have recieved your message and will be in touch with you shortly.</p>');
+	//$('.successMessage').html('<p>Thanks for contacting us __ .  We have recieved your message and will be in touch with you shortly.</p>');
 
 });
 
