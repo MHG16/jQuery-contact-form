@@ -4,9 +4,33 @@ body {
 
 .formHolder {
   width: 25em;
-  background-color: white; }
+  height: 34.375em;
+  background-color: white;
+  margin: 3em; }
+
+form {
+  margin-left: 2em; }
+
+h1 {
+  font-size: 2em;
+  margin-left: 1em; }
+
+p {
+  font-size: 1.25em; }
+
+input {
+  width: 21.875em;
+  height: 2em;
+  border-left: 4px solid black; }
 
 .error {
   color: red; }
+
+.message {
+  height: 10em; }
+
+button {
+  width: 9em;
+  height: 4em; }
 
 /*# sourceMappingURL=main.css.map */
