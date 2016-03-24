@@ -1,6 +1,7 @@
 body {
   background-image: url(../images/bg.jpg);
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  font-family: sans-serif; }
 
 .formHolder {
   width: 25em;
@@ -38,8 +39,9 @@ input {
   width: 100%; }
 
 button {
-  width: 9em;
-  height: 4em;
+  width: 40%;
+  height: 5em;
+  font-size: 1em;
   color: white;
   background-color: black; }
 
