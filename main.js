@@ -28,39 +28,45 @@ form.on('submit', function(e) {
 	var userWebsite = $('.website').val();
 	var userMessage = $('.message').val();
 
+//function to check that Email field is not empty and it contains '@'
+function validateEmail () {
+	if (userEmail === '') {
+		$('.emailError').html('<p>Email cannot be left empty</p>');
+	}
+	else if (userEmail.indexOf('@') === -1) {
+		$('.emailError').html('<p>Email must contain an \'@\'</p>');
+	}
+	return;  
+}
+
+//function to check that website field is not empty and starts with 'http://'
+function validateWebsite () {
+	if (userWebsite === '') {
+		$('.websiteError').html('<p>Website cannot be left empty</p>');
+	}
+	else if (userWebsite.substring(0, 7) !== 'http://') {
+		$('.websiteError').html('<p>Website must start with http://</p>');
+	}
+	return;  
+}
 
 $( ".target" ).hide();
 
 
 	if (userName === '') {
 		$('.nameError').html('<p>Name cannot be left empty</p>')
-		$('.nameError').css('color', 'red');
 	}
 
-	if (userEmail === '') {
-		$('.emailError').html('<p>Email cannot be left empty</p>');
-		$('.emailError').css('color', 'red');
-	}
+	validateEmail();
+	validateWebsite();
 
-	if (userEmail.indexOf('@') === -1) {
-		$('.emailError').html('<p>Email must contain an \'@\'</p>');
-		$('.emailError').css('color', 'red');
-	}
-
-	if (userWebsite === '') {
-		$('.websiteError').html('<p>Website cannot be left empty</p>');
-		$('.websiteError').css('color', 'red');
-	}
-
-	if (userWebsite.substring(0, 7) !== 'http://') {
-		$('.websiteError').html('<p>Website must start with http://</p>');
-		$('.websiteError').css('color', 'red');
-	}
 
 	if (userMessage === '') {
 		$('.messageError').html('<p>Message cannot be left empty</p>');
-		$('.messageError').css('color', 'red');
 	}
+
+
+
 
 	//$('.successMessage').html('<p>Thanks for contacting us __ .  We have recieved your message and will be in touch with you shortly.</p>');
 
