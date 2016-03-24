@@ -12,10 +12,6 @@ body {
 	padding: 1.5em;   
 }
 
-form {
-	margin-left: 1em;  
-}
-
 
 h1 {
 	font-size: 1.5em;  
@@ -30,7 +26,7 @@ p {
 
 .error {
 	color: red; 
-	font-size: 1.25em;  
+	font-size: 1em;  
 	margin: 0.5em 0em 0.5em 0em; 
 }
 
@@ -48,6 +44,7 @@ input {
 	height: 10em; 
 	width: 100%; 
 	font-size: 1.25em;  
+	border-left: 4px solid black;  
 }
 
 
@@ -58,3 +55,17 @@ button {
 	color: white;
 	background-color: black;  
 }
+
+.success {
+	background-color: white;  
+}
+
+.successMessage {
+	font-size: 1em;
+	text-align: center;   
+}
+
+
+
+
+

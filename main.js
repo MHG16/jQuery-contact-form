@@ -23,6 +23,8 @@ form.on('submit', function(e) {
 
 	e.preventDefault();
 
+	var isErr = false;
+
 	var userName = $('.name').val();
 	var userEmail = $('.email').val();
 	var userWebsite = $('.website').val();
@@ -55,6 +57,7 @@ $( ".target" ).hide();
 
 	if (userName === '') {
 		$('.nameError').html('<p class="error">Name cannot be left empty</p>');
+		isErr = true;
 	}
 
 	validateEmail();
@@ -63,10 +66,12 @@ $( ".target" ).hide();
 
 	if (userMessage === '') {
 		$('.messageError').html('<p class="error">Message cannot be left empty</p>');
-	
+		isErr = true; 
 	}
 
-
+	if (isErr) {
+		$('.successMessage').html('<p>Thanks for contacting us '+userName+ '.  We have recieved your message and will be in touch with you shortly.</p>');
+	}
 	$('.successMessage').html('<p>Thanks for contacting us '+userName+ '.  We have recieved your message and will be in touch with you shortly.</p>');
 
 });
