@@ -3,12 +3,12 @@ body {
 	background-image: url(../images/bg.jpg);
 	background-repeat: repeat;
 	font-family: sans-serif;  
+	padding: 2em; 
 }
 
 .formHolder {
-	width: 25em; 
 	background-color: white; 
-	margin: 3em;  
+	margin: 3em auto;    
 	padding: 1.5em;   
 }
 
@@ -65,7 +65,11 @@ button {
 	text-align: center;   
 }
 
-
+@media (min-width: 768px) {
+	body {
+		padding: 2em 12em 2em 12em;  
+	}	
+}
 
 
 

@@ -1,12 +1,12 @@
 body {
   background-image: url(../images/bg.jpg);
   background-repeat: repeat;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  padding: 2em; }
 
 .formHolder {
-  width: 25em;
   background-color: white;
-  margin: 3em;
+  margin: 3em auto;
   padding: 1.5em; }
 
 h1 {
@@ -47,5 +47,9 @@ button {
 .successMessage {
   font-size: 1em;
   text-align: center; }
+
+@media (min-width: 768px) {
+  body {
+    padding: 2em 12em 2em 12em; } }
 
 /*# sourceMappingURL=main.css.map */
