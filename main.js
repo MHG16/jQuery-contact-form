@@ -16,6 +16,19 @@
 // Message cannot be left empty
 
 
+
+// when hovering over the submit button, the background color fades to green over the course of .5 seconds
+
+$(document).ready(function(){
+
+	$('button').hover(function () {
+		 $('button').css('background-color', '#88C470');
+	
+	   },function(){
+    $('button').css('background-color', '');
+  });
+});
+
 var form = $('form');
 
 
@@ -34,9 +47,11 @@ form.on('submit', function(e) {
 function validateEmail () {
 	if (userEmail === '') {
 		$('.emailError').html('<p class="error">Email cannot be left empty</p>');
+		$('.email').css('border-left-color', 'red');
 	}
 	else if (userEmail.indexOf('@') === -1) {
 		$('.emailError').html('<p class="error">Email must contain an \'@\'</p>');
+		$('.email').css('border-left-color', 'red');
 	}
 	return;  
 }
@@ -45,9 +60,11 @@ function validateEmail () {
 function validateWebsite () {
 	if (userWebsite === '') {
 		$('.websiteError').html('<p class="error">Website cannot be left empty</p>');
+		$('.website').css('border-left-color', 'red');
 	}
 	else if (userWebsite.substring(0, 7) !== 'http://') {
 		$('.websiteError').html('<p class="error">Website must start with http://</p>');
+		$('.website').css('border-left-color', 'red');
 	}
 	return;  
 }
@@ -57,6 +74,7 @@ $( ".target" ).hide();
 
 	if (userName === '') {
 		$('.nameError').html('<p class="error">Name cannot be left empty</p>');
+		$('.name').css('border-left-color', 'red');
 		isErr = true;
 	}
 
@@ -66,6 +84,7 @@ $( ".target" ).hide();
 
 	if (userMessage === '') {
 		$('.messageError').html('<p class="error">Message cannot be left empty</p>');
+		$('.message').css('border-left-color', 'red');
 		isErr = true; 
 	}
 
