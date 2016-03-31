@@ -48,8 +48,8 @@ button {
   font-size: 1em;
   text-align: center; }
 
-@media (min-width: 768px) {
-  body {
-    padding: 2em 12em 2em 12em; } }
+@media (min-width: 979px) {
+  .formHolder {
+    max-width: 980px; } }
 
 /*# sourceMappingURL=main.css.map */

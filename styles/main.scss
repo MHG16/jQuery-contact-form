@@ -4,6 +4,7 @@ body {
 	background-repeat: repeat;
 	font-family: sans-serif;  
 	padding: 2em; 
+
 }
 
 .formHolder {
@@ -65,9 +66,11 @@ button {
 	text-align: center;   
 }
 
-@media (min-width: 768px) {
-	body {
-		padding: 2em 12em 2em 12em;  
+@media (min-width: 979px) {
+	 
+		.formHolder {
+			max-width: 980px;  
+		
 	}	
 }
 
