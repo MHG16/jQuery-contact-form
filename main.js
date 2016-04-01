@@ -43,6 +43,13 @@ form.on('submit', function(e) {
 	var userWebsite = $('.website').val();
 	var userMessage = $('.message').val();
 
+//for each validation check, first hide the error messages that way when a user corrects
+//an error, that error will disappear.
+	$('.nameError').hide();  
+	$('.emailError').hide();
+	$('.websiteError').hide();
+	$('.messageError').hide();
+
 //function to check that Email field is not empty and it contains '@'
 function validateEmail () {
 	if (userEmail === '') {
@@ -69,7 +76,7 @@ function validateWebsite () {
 	return;  
 }
 
-$( ".target" ).hide();
+$('.target').hide();
 
 
 	if (userName === '') {
