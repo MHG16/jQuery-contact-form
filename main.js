@@ -95,11 +95,11 @@ $('.target').hide();
 		isErr = true; 
 	}
 
-	if (isErr) {
+	else if (!isErr) {
+		$('.entry').css('display', 'none');
 		$('.successMessage').html('<p>Thanks for contacting us '+userName+ '.  We have recieved your message and will be in touch with you shortly.</p>');
 	}
-	$('.successMessage').html('<p>Thanks for contacting us '+userName+ '.  We have recieved your message and will be in touch with you shortly.</p>');
-
+	
 });
 
 
