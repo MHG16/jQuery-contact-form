@@ -3,7 +3,7 @@ body {
 	background-image: url(../images/bg.jpg);
 	background-repeat: repeat;
 	font-family: sans-serif;  
-	padding: 2em; 
+	padding: 2em 4em; 
 
 }
 
@@ -57,14 +57,14 @@ button {
 }
 
 .success {
-	background-color: white;  
+	background-color: white; 
 
 }
 
 .successMessage > p {
 		text-align: center;  
 		font-size: 1.25em;
-		padding: 2em;  
+		padding: 2em;   
 } 
 
 @media (min-width: 979px) {

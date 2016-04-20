@@ -23,6 +23,7 @@ $(document).ready(function(){
 
 	$('button').hover(function () {
 		 $('button').css('background-color', '#88C470');
+		
 
 	   },function(){
     $('button').css('background-color', '');
