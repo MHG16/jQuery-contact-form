@@ -44,9 +44,10 @@ button {
 .success {
   background-color: white; }
 
-.successMessage {
-  font-size: 1em;
-  text-align: center; }
+.successMessage > p {
+  text-align: center;
+  font-size: 1.25em;
+  padding: 2em; }
 
 @media (min-width: 979px) {
   .formHolder {

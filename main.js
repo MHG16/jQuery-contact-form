@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 	$('button').hover(function () {
 		 $('button').css('background-color', '#88C470');
-	
+
 	   },function(){
     $('button').css('background-color', '');
   });
@@ -49,15 +49,21 @@ form.on('submit', function(e) {
 	$('.emailError').hide();
 	$('.websiteError').hide();
 	$('.messageError').hide();
+	$('.email').css('border-left-color', 'black');
+	$('.website').css('border-left-color', 'black');
+	$('.name').css('border-left-color', 'black');
+	$('.message').css('border-left-color', 'black');
 
 //function to check that Email field is not empty and it contains '@'
 function validateEmail () {
 	if (userEmail === '') {
 		$('.emailError').html('<p class="error">Email cannot be left empty</p>');
+		$('.emailError').show();
 		$('.email').css('border-left-color', 'red');
 	}
 	else if (userEmail.indexOf('@') === -1) {
 		$('.emailError').html('<p class="error">Email must contain an \'@\'</p>');
+		$('.emailError').show();
 		$('.email').css('border-left-color', 'red');
 	}
 	return;  
@@ -67,10 +73,12 @@ function validateEmail () {
 function validateWebsite () {
 	if (userWebsite === '') {
 		$('.websiteError').html('<p class="error">Website cannot be left empty</p>');
+		$('.websiteError').show();
 		$('.website').css('border-left-color', 'red');
 	}
 	else if (userWebsite.substring(0, 7) !== 'http://') {
 		$('.websiteError').html('<p class="error">Website must start with http://</p>');
+		$('.websiteError').show();
 		$('.website').css('border-left-color', 'red');
 	}
 	return;  
@@ -81,6 +89,7 @@ $('.target').hide();
 
 	if (userName === '') {
 		$('.nameError').html('<p class="error">Name cannot be left empty</p>');
+		$('.nameError').show();
 		$('.name').css('border-left-color', 'red');
 		isErr = true;
 	}
@@ -91,13 +100,14 @@ $('.target').hide();
 
 	if (userMessage === '') {
 		$('.messageError').html('<p class="error">Message cannot be left empty</p>');
+		$('.messageError').show();
 		$('.message').css('border-left-color', 'red');
 		isErr = true; 
 	}
 
 	else if (!isErr) {
 		$('.entry').css('display', 'none');
-		$('.successMessage').html('<p>Thanks for contacting us '+userName+ '.  We have recieved your message and will be in touch with you shortly.</p>');
+		$('.successMessage').html('<p>Thanks for contacting us '+userName+'.  We have recieved your message and will be in touch with you shortly.</p>');
 	}
 	
 });
